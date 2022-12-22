@@ -233,7 +233,7 @@ int32_t HT_Search( const Hash_table* ht, int32_t key )
    int home = h( key, ht->size );
    int pos = home;
 
-   DBG_PRINT( "Calculé el valor hash: %d para la llave: %d\n", pos, key );
+   DBG_PRINT( "Calcule el valor hash: %d para la llave: %d\n", pos, key );
 
    int i = 0;
 
@@ -348,8 +348,8 @@ int main()
 
    print_hash_table( tabla );
 
-   int32_t idx = HT_Search( tabla, 5054 );
-   assert( idx == 4 ); // esperamos el índice 4
+   int32_t idx = HT_Search( tabla, 3032 );
+   //assert( idx ==  ); // esperamos el índice 4
    Empleado_Print( &empleados[ idx ] );
 
 
