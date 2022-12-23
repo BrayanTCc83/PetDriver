@@ -169,7 +169,7 @@ void HT_Delete( Hash_table** ht )
  *
  * @return 
  */
-bool HT_Insert( Hash_table* ht, int32_t key, int32_t idx )
+bool HT_Insert( Hash_table* ht, int32_t key, int32_t idx, char name[32], int num_viajes, float tarifa, int32_t id )
 {
    assert( ht );
    assert( ht->len < ht->size );
