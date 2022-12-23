@@ -170,8 +170,7 @@ void HT_Delete( Hash_table** ht )
  *
  * @return 
  */
-bool HT_Insert( Hash_table* ht, int32_t key, int32_t idx, char name[32], int num_viajes, float tarifa, int32_t id )
-{
+bool HT_Insert( Hash_table* ht, int32_t key, int32_t idx, char name[32], int num_viajes, float tarifa){
    assert( ht );
    assert( ht->len < ht->size );
 
@@ -339,12 +338,14 @@ int main()
    // la tabla recién se creó, debe estar vacía
 
 
-   for( size_t i = 0; i < MAX_TRABAJADORES && !HT_IsFull( tabla ); ++i )
-   {
+   for( size_t i = 0; i < MAX_TRABAJADORES && !HT_IsFull( tabla ); ++i ){
       HT_Insert( 
          tabla,                   // tabla hash
          empleados[ i ].id, // key
-         i );                     // idx
+         i,
+         empleados[i].name,
+         empleados[i].num_viajes,
+         empleados[i].tarifa);                     // idx
    }
 
    print_hash_table( tabla );
