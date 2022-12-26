@@ -3,7 +3,6 @@
 #include <stdbool.h>
 #include <assert.h>
 #include <math.h>
-
 #include <stdint.h>
 //para int32_t, uint32_t, etc.
 //Esta versión sólo soporta llaves (keys) enteras positivas.
@@ -270,8 +269,6 @@ float HT_LoadFactor( const Hash_table* ht )
    return 0.0;
 }
 
-#define HASH_TABLE_SIZE 7
-#define MAX_TRABAJADORES 5
 
 int len(Hash_table* ht){
     return ht->len;
@@ -1274,14 +1271,21 @@ void Print_list(Queue* q)
     printf("\n");
 }
 
+
 //--------------------------------------------------------------------- Fin de los grafos
+
+
+#define HASH_TABLE_SIZE 7
+#define MAX_TRABAJADORES 5
+#define MAX_DATA 10
+//--------------------------------------------------------------------- Fin de los defines
 
 //----------------------------------------------------------------------
 // Driver program 
 //----------------------------------------------------------------------
 int main()
 {
-   Trabajador empleados[ MAX_TRABAJADORES ] =
+   /*Trabajador empleados[ MAX_TRABAJADORES ] =
    {
       // id        Nombre      Num_viajes  tarifa         idx
       { 1010,     "Brandom",       1,         9.0 },    // [0]
@@ -1292,15 +1296,16 @@ int main()
    };
 
    Hash_table* tabla = HT_New( HASH_TABLE_SIZE );
-
    assert( tabla ); // el programa se detiene si la tabla no se pudo crear
    assert( HT_IsEmpty( tabla ) == true );// la tabla recién se creó, debe estar vacía
-   size_t i=0;
 
-   for(  i= 0; i < MAX_TRABAJADORES && !HT_IsFull( tabla ); ++i ){
+   for(int i=0; i < MAX_TRABAJADORES && !HT_IsFull( tabla ); ++i ){
       HT_Insert( tabla,empleados[ i ].id,i);
    }
 
    HT_Delete( &tabla );
-   assert( tabla == NULL );
+   assert( tabla == NULL );*/
+   //-------------------------------------------------------------------- Creacion del Hash Table
+   
+
 }
