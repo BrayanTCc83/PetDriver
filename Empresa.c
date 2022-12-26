@@ -314,6 +314,8 @@ int h_Linear(int key,int i){
    return i + 1;
 }
 
+
+
 //----------------------------------------------------------------------
 // Driver program 
 //----------------------------------------------------------------------
@@ -331,24 +333,17 @@ int main()
 
    Hash_table* tabla = HT_New( HASH_TABLE_SIZE );
 
-   assert( tabla );
-   // el programa se detiene si la tabla no se pudo crear
-
-   assert( HT_IsEmpty( tabla ) == true );
-   // la tabla recién se creó, debe estar vacía
+   assert( tabla ); // el programa se detiene si la tabla no se pudo crear
+   assert( HT_IsEmpty( tabla ) == true );// la tabla recién se creó, debe estar vacía
    size_t i=0;
 
    for(  i= 0; i < MAX_TRABAJADORES && !HT_IsFull( tabla ); ++i ){
-      HT_Insert( 
-         tabla,                   // tabla hash
-         empleados[ i ].id, // key
-         i);                     // idx
+      HT_Insert( tabla,empleados[ i ].id,i);
    }
 
- //  HT_Insert(tabla, 9999, i, "Pepe", 25, 32.5);
    print_hash_table( tabla );
 
-   int32_t idx = HT_Search( tabla, 3032);
+   int32_t idx = HT_Search( tabla, 5054);
    //assert( idx ==  ); // esperamos el índice 4
    Empleado_Print( &empleados[ idx ] );
 
