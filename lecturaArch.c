@@ -1,29 +1,29 @@
-void file_Read(){
-    char nombre_arch[80];
-    printf("Que archivo deseas abrir: \n$");
-    scanf("%s", nombre_arch);
+#include <stdio.h>
+#include <json-c/json.h>
 
-    FILE* file_in = fopen(nombre_arch,"r");
+int main() {
+  
+  FILE *fp = fopen("data.json", "r");
+  if (!fp) {
+    fprintf(stderr, "Error al abrir el archivo JSON\n");
+    return 1;
+  }
 
-    if(file_in == NULL){
-        printf("El archivo %s no pudo ser abierto. \n", nombre_arch);
-        exit(-1);
-    }
-    char name_out[80];
-    printf("¿Como quiere llamar a su nuevo archivo?\n$");
-    scanf("%s",name_out);
+  
+  json_object *root = json_parse_file(fp);
+  if (!root) {
+    fprintf(stderr, "Error al parsear el archivo JSON\n");
+    return 1;
+  }
 
-    FILE* file_out = fopen(name_out, "w");
+  
+  fclose(fp);
 
-    if( file_out ==NULL ){
-        printf("El archivo %s no pudo ser abierto.\n", name_out);
-        exit(-1);
-    }
-    char texto[81];
-    while(!feof( file_in )){
-        fgets( texto, 81, file_in );
-        fputs( texto, file_out );
-    }
-    fclose(file_in);
-    fclose(file_out);
-}
+  // Accede a los datos del archivo JSON usando funciones como json_object_get()
+  json_object *name = json_object_get(root, "name");
+  if (!name) {
+    fprintf(stderr, "No se encontró el campo 'name' en el archivo JSON\n");
+    return 1;
+  }
+
+  
