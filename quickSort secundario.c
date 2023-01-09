@@ -4,10 +4,7 @@
 #define MAX 10
 #define LIM 10
 
-int gComparaciones=0;
-int gIntercambios=0;
-
-void QuickSort(int list[], int first, int last){
+/*void QuickSort(Empresa *empresa, int first, int last){
     int x0=first;
     int x1=last;
     int mid = (first+last)/2;
@@ -16,11 +13,11 @@ void QuickSort(int list[], int first, int last){
     while (x0<=x1){
         while (list[x0]<piv)
             x0++;
-            gComparaciones++;
+            
         
         while(list[x1]>piv)
             x1--;
-            gComparaciones++;
+
         
         if(x0<=x1){
             swap(&list[x0],&list[x1]);
@@ -36,14 +33,14 @@ void QuickSort(int list[], int first, int last){
     if(x0<last){
         QuickSort(list,x0,last);
     }
-}
+}*/
 
-void swap(int *x1, int *x2){
-    int aux; 
+void swap(Empleado *x1,Empleado *x2){
+    Empleado aux; 
     aux=*x1;
     *x1=*x2;
     *x2=aux;
-    gIntercambios++;
+
 }
 
 void printList(int list[], int n){
@@ -75,14 +72,28 @@ int main(){
     
     srand(time(NULL));
     int list[MAX];
+    char nombre[32]="deivid";
+
+    Empleado empleado1;
+    Empleado empleado2;
+
+    empleado1.id=45;
+    empleado1.noViajes=10;
+    empleado1.tarifa=2.000;
+
+    empleado2.id=3;
+    empleado2.noViajes=3;
+    empleado2.tarifa=3.000;
+
+
     
-    for(size_t i=0;i<MAX;i++){
+   /* for(size_t i=0;i<MAX;i++){
         list[i]=rand()%1000;
     }
     
-    /*for(size_t i=0;i<MAX;i++){
+    for(size_t i=0;i<MAX;i++){
         list[i]=2;
-    }*/
+    }
     
     int tamanoArr=sizeof(list)/sizeof(int);
     printf("Antes:");
@@ -94,5 +105,13 @@ int main(){
     
     printf("El numero de comparciones es:%d\n",gComparaciones);
     
-    printf("El numero de intercambios es:%d\n",gIntercambios);
+    printf("El numero de intercambios es:%d\n",gIntercambios);*/
+
+    printf("El barcode del primero es:%d\n",empleado1.id);
+    printf("El barcode del segundo es:%d\n",empleado2.id);
+
+    swap(&empleado1,&empleado2);
+
+    printf("El barcode del primero es:%d\n",empleado1.id);
+    printf("El barcode del segundo es:%d\n",empleado2.id);
 }
