@@ -3,6 +3,7 @@
 
 #include <stdio.h>
 #include <stdlib.h>
+
 typedef struct Empleado
 {
     int id;
@@ -16,7 +17,7 @@ typedef struct Empresa
 {
     char nameEmpresa[40];
     char direccion[100];
-    Empleado empleado[5];
+    
 }Empresa;
 
 

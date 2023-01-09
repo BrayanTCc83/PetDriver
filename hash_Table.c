@@ -32,13 +32,13 @@ enum{
 
 
 
-void Empleado_Print(Trabajador *p){
+void Empleado_Print(Empleado *p){
    printf( 
       "Nombre: %s\n"
       "Price: $%0.2f\n"
       "Numero de viajes:%d\n"
       "ID:%d\n",
-      p->name, p->tarifa,p->num_viajes, p->id );
+      p->nombre, p->tarifa,p->noViajes, p->id );
 }
 
 // for debugging purposes only!

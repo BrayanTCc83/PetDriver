@@ -4,13 +4,8 @@
 #include <stdio.h>
 #include <stdbool.h>
 #include <stdint.h>
+#include "createJason.h"
 
-typedef struct{
-   int32_t id;
-   char name[ 32 ];
-   int num_viajes;
-   float tarifa;
-}Trabajador;
 
 /**
  * Tupla ( key, index )
@@ -41,7 +36,7 @@ typedef struct
 	size_t  len;        ///< Es el número actual de elementos en la tabla
 } Hash_table;
 
-void Empleado_Print(Trabajador *p);
+void Empleado_Print(Empleado *p);
 static void print_hash_table( const Hash_table* ht );
 Hash_table* HT_New( size_t size );
 void HT_Delete( Hash_table** ht );

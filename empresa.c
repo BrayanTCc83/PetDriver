@@ -14,7 +14,7 @@
 #define MAX_DATA 10
 int main()
 {
-   Trabajador empleados[ MAX_TRABAJADORES ] =
+   Empleado empleados[ MAX_TRABAJADORES ] =
    {
       // id        Nombre      Num_viajes  tarifa         idx
       { 1010,     "Brandom",       1,         9.0 },    // [0]
@@ -31,6 +31,8 @@ int main()
    for(int i=0; i < MAX_TRABAJADORES && !HT_IsFull( tabla ); ++i ){
       HT_Insert( tabla,empleados[ i ].id,i);
    }
+
+   //quickSort(empleados)
 
    HT_Delete( &tabla );
    assert( tabla == NULL );
