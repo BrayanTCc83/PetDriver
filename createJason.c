@@ -23,7 +23,7 @@ void create_json(Empresa* empresa, char* file_name){
         fprintf(json_output, ",\n");
         fprintf(json_output, "{ ");
         fprintf(json_output, "\"trabajador\": \"%s\", \"id\": %d, \"no. viajes\": %d,\"tarifa\": %.2f", empresa->empleado[i].nombre,
-                                                                                                        empresa->empleado[i].noIdenticacion,
+                                                                                                        empresa->empleado[i].id,
                                                                                                         empresa->empleado[i].noViajes,
                                                                                                         empresa->empleado[i].tarifa);
         fprintf(json_output, " }");
@@ -33,9 +33,9 @@ void create_json(Empresa* empresa, char* file_name){
     fclose(json_output);
  
 }
-/*
-Para pruebas
-int main(int argc, char const *argv[])
+
+//Para pruebas
+/*int main(int argc, char const *argv[])
 {
        Empresa petDriver={
       .direccion="calle",

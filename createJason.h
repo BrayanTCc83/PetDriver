@@ -5,7 +5,7 @@
 #include <stdlib.h>
 typedef struct Empleado
 {
-    int noIdenticacion;
+    int id;
     char nombre[32];
     int noViajes;
     float tarifa;

@@ -83,7 +83,7 @@ void printArray(Product list[], int size)
 {
     for (int i = 0; i < size; i++)
     {
-        printf("Barcode:%d   Price $%.2f \n", list[i].barcode, list[i].price);
+        printf("Id::%d   Price $%.2f \n", list[i].barcode, list[i].price);
     }
 }
 
