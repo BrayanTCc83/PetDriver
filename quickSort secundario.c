@@ -1,28 +1,30 @@
 #include <stdlib.h>
 #include <stdio.h>
 #include "createJason.h"
-#include "empresa.c"
+//#include "empresa.c"
+
 #define MAX 10
 #define LIM 10
 
 void quicksort(Empresa empresa){
     int first=empresa.empleados[0].id;
     int last=empresa.empleados[MAX_TRABAJADORES-1].id;
-    QuickSort(&empresa, first, last);
+    QuickSort(&empresa, 0 , MAX_TRABAJADORES-1);
 }
 
 void QuickSort(Empresa *empresa, int first, int last){
+    
     int x0=first;
     int x1=last;
     int mid = (first+last)/2;
-    int piv=empresa->empleados[mid].id;
+    Empleado piv=empresa->empleados[mid];
 
     while (x0<=x1){
-        while (<piv)
+        while (empresa->empleados[x0].id<piv.id)
             x0++;
             
         
-        while(empresa->empleados[x1].id>piv)
+        while(empresa->empleados[x1].id>piv.id)
             x1--;
 
         
@@ -34,13 +36,13 @@ void QuickSort(Empresa *empresa, int first, int last){
     }
     
     if(first<x1){
-        QuickSort(&empresa,first,x1);
+        QuickSort(empresa,first,x1);
     }
     
     if(x0<last){
-        QuickSort(&empresa,x0,last);
+        QuickSort(empresa,x0,last);
     }
-}*/
+}
 
 void swap(Empleado *x1,Empleado *x2){
     Empleado aux; 
@@ -76,31 +78,22 @@ void printList(Empresa empresa, int n){
 }*/
 
 int main(){
-    
-    srand(time(NULL));
-    int list[MAX];
-    char nombre[32]="deivid";
+Empresa petDriver={
+      .direccion="calle",
+      .nameEmpresa="Pet Driver",
+      .empleados [0]={ 5010,     "Brandom",       1,         9.0 }, 
+      .empleados [1]={ 7021,     "Guillermo",     2,        16.5 },
+      .empleados [2]={ 3032,     "Brayan",        3,        28.5 }, 
+      .empleados [3]={ 1043,     "Emanuel",       4,        14.0 },
+      .empleados [4]={ 5054,     "Juan Pablo",    5,        25.0 }
+   };
 
+   for (size_t i = 0; i < 5; i++)
+    printf("La pos: %d tiene el id: %d\n", i, petDriver.empleados[i].id);
+   //quicksort(petDriver);
+   QuickSort(&petDriver,0,4);
+   printf("\n");
+   for (size_t i = 0; i < 5; i++)
+    printf("La pos: %d tiene el id: %d\n", i, petDriver.empleados[i].id);
     
-   /* for(size_t i=0;i<MAX;i++){
-        list[i]=rand()%1000;
-    }
-    
-    for(size_t i=0;i<MAX;i++){
-        list[i]=2;
-    }
-    
-    int tamanoArr=sizeof(list)/sizeof(int);
-    printf("Antes:");
-    printList(list,tamanoArr);
-    mediana(list,tamanoArr);
-    QuickSort(list,0,MAX-1);
-    printf("Despues:");
-    printList(list,tamanoArr);
-    
-    printf("El numero de comparciones es:%d\n",gComparaciones);
-    
-    printf("El numero de intercambios es:%d\n",gIntercambios);*/
-
-   
 }
