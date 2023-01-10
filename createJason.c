@@ -40,14 +40,15 @@ void create_json(Empresa* empresa, char* file_name){
        Empresa petDriver={
       .direccion="calle",
       .nameEmpresa="Pet Driver",
-      .empleado [0]={ 1010,     "Brandom",       1,         9.0 }, 
-      .empleado [1]={ 2021,     "Guillermo",     2,        16.5 },
-      .empleado [2]={ 3032,     "Brayan",        3,        28.5 }, 
-      .empleado [3]={ 4043,     "Emanuel",       4,        14.0 },
-      .empleado [4]={ 5054,     "Juan Pablo",    5,        25.0 }
+      .empleados [0]={ 1010,     "Brandom",       1,         9.0 }, 
+      .empleados [1]={ 2021,     "Guillermo",     2,        16.5 },
+      .empleados [2]={ 3032,     "Brayan",        3,        28.5 }, 
+      .empleados [3]={ 4043,     "Emanuel",       4,        14.0 },
+      .empleados [4]={ 5054,     "Juan Pablo",    5,        25.0 }
 
    };
     char nombreArchivoJson[80] = "test";
    create_json(&petDriver,nombreArchivoJson);
     
-}*/
+}
+*/

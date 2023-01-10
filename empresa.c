@@ -38,7 +38,10 @@ int main()
       HT_Insert( tabla,empleados[ i ].id,i);
    }
 
+char archivo[32]="nombre del archivo";
+
    //quickSort(empleados)
+   create_json(&empresa,archivo);
 
    HT_Delete( &tabla );
    assert( tabla == NULL );
