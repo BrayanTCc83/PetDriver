@@ -22,10 +22,10 @@ void create_json(Empresa* empresa, char* file_name){
         if (i > 0)
         fprintf(json_output, ",\n");
         fprintf(json_output, "{ ");
-        fprintf(json_output, "\"trabajador\": \"%s\", \"id\": %d, \"no. viajes\": %d,\"tarifa\": %.2f", empresa->empleado[i].nombre,
-                                                                                                        empresa->empleado[i].id,
-                                                                                                        empresa->empleado[i].noViajes,
-                                                                                                        empresa->empleado[i].tarifa);
+        fprintf(json_output, "\"trabajador\": \"%s\", \"id\": %d, \"no. viajes\": %d,\"tarifa\": %.2f", empresa->empleados[i].nombre,
+                                                                                                        empresa->empleados[i].id,
+                                                                                                        empresa->empleados[i].noViajes,
+                                                                                                        empresa->empleados[i].tarifa);
         fprintf(json_output, " }");
     }
     fprintf(json_output, "\n]"); 
