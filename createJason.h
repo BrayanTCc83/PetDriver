@@ -17,6 +17,7 @@ typedef struct Empresa
 {
     char nameEmpresa[40];
     char direccion[100];
+    Empleado empleados[5];
     
 }Empresa;
 

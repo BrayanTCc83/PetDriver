@@ -15,6 +15,7 @@
 #define MAX_DATA 10
 int main()
 {
+   Empresa empresa;
    Empleado empleados[ MAX_TRABAJADORES ] =
    {
       // id        Nombre      Num_viajes  tarifa         idx
@@ -25,6 +26,10 @@ int main()
       { 5054,     "Juan Pablo",    5,        25.0 },
    };
 
+   for(int i=0;i<MAX_TRABAJADORES;i++){
+      empresa.empleados[i]=empleados[i];
+   }
+
    Hash_table* tabla = HT_New( HASH_TABLE_SIZE );
    assert( tabla ); // el programa se detiene si la tabla no se pudo crear
    assert( HT_IsEmpty( tabla ) == true );// la tabla recién se creó, debe estar vacía
@@ -33,7 +38,7 @@ int main()
       HT_Insert( tabla,empleados[ i ].id,i);
    }
 
-   //quickSort(empleados)
+   quickSort(empleados)
 
    HT_Delete( &tabla );
    assert( tabla == NULL );
