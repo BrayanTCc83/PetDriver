@@ -2,6 +2,7 @@
 #include<stdlib.h>
 #include "hashTable.h"
 #include "createJason.h"
+#include"quickSort.h"
 
 #include <assert.h>
 
@@ -15,7 +16,16 @@
 #define MAX_DATA 10
 int main()
 {
-   Empresa empresa;
+      Empresa petDriver={
+      .direccion="Escolar 04360, C.U., Coyoacán, 04510 Ciudad de México, CDMX",
+      .nameEmpresa="Pet Driver",
+      .empleados [0]={ 1010,     "Brandom",       1,         9.0 }, 
+      .empleados [1]={ 2021,     "Guillermo",     2,        16.5 },
+      .empleados [2]={ 3032,     "Brayan",        3,        28.5 }, 
+      .empleados [3]={ 4043,     "Emanuel",       4,        14.0 },
+      .empleados [4]={ 5054,     "Juan Pablo",    5,        25.0 }
+
+   };
    Empleado empleados[ MAX_TRABAJADORES ] =
    {
       // id        Nombre      Num_viajes  tarifa         idx
