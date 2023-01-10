@@ -38,7 +38,7 @@ int main()
       HT_Insert( tabla,empleados[ i ].id,i);
    }
 
-   quickSort(empleados)
+   //quickSort(empleados)
 
    HT_Delete( &tabla );
    assert( tabla == NULL );
