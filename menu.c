@@ -1,6 +1,4 @@
-#include <stdio.h>
-#include "hashTable.h"
-#include "empresa.c"
+#include "menu.h"
 
 void menu (Hash_table *tabla, Empresa empresa){
 
@@ -20,15 +18,15 @@ void menu (Hash_table *tabla, Empresa empresa){
         break;
     
     case 2:
-        print_hash_table(&tabla);
+        //print_hash_table(tabla);
         break;
 
     case 3:
-        print_hash_table(&tabla);
+        //print_hash_table(tabla);
         printf("Que empleado quiere contratar? (ID) \t");
         scanf("%d",&scanId);
 
-        int contratado = HT_Search(&tabla, scanId);
+        int contratado = HT_Search(tabla, scanId);
         
         printf("\nDuracion del paseo (min):");
         scanf("%f",&duracion);
