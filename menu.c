@@ -29,7 +29,8 @@ void menu (Hash_table *tabla, Empresa empresa){
     case 2:
         printf("Quiere ver los empleados?");
         scanf("%d",&opc);
-        (opc==1?imprimirEmpleados(empresa):opc=0);
+        if(opc==1)
+        imprimirEmpleados(empresa);
 
         printf("Que empleado quiere contratar? (ID) \t");
         scanf("%d",&scanId);
