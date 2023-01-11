@@ -7,21 +7,18 @@ void menu (Hash_table *tabla, Empresa empresa){
     float duracion;
     float costo;
 
-    printf("Que quiere hacer KOKO?");
+    printf("\nQue quiere hacer KOKO?");
     scanf("%d",&opc);
 
 
     switch (opc)
     {
     case 1:
-        printf("Somos los mas bellacos de la FI"); 
+            //print_hash_table(tabla);
+
         break;
     
     case 2:
-        //print_hash_table(tabla);
-        break;
-
-    case 3:
         //print_hash_table(tabla);
         printf("Que empleado quiere contratar? (ID) \t");
         scanf("%d",&scanId);
@@ -34,9 +31,15 @@ void menu (Hash_table *tabla, Empresa empresa){
         
         printf("\nEl costo del paseo es:%d",costo);
         //create_json( haga el recibo );
+        
+        break;
+
+    case 3:
+        printf("Somos los mas bellacos de la FI"); 
 
         break;
     default:
+        printf("Opcion Incorrecta");
         break;
     }
 
