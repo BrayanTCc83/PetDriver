@@ -1,4 +1,5 @@
 #include "menu.h"
+#include "ticket.h"
 #include "empresa.c"
 
 void imprimirEmpleados(Empresa empresa){
