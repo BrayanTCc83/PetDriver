@@ -43,7 +43,8 @@ void menu (Hash_table *tabla, Empresa empresa){
         costo=empresa.empleados[contratado].tarifa*duracion;
         
         printf("\nEl costo del paseo es:%d",costo);
-        //create_json( haga el recibo );
+        char name[16]="ticket";
+        ticket(&empresa,name,duracion);
         
         break;
 
