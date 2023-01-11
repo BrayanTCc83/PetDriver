@@ -1,0 +1,12 @@
+--------MENU----------
+
+Bienvenido a petdriver
+Somos una empresa que tiene como objetivo el bienestar de su mascota, nuestro objetivo es realizar paseos de mascotas con precios
+accesibles para que usted y su mascota puedan tener el mejor dia posible! 
+
+1) Quienes somos?
+1) Ver empleados -> desea ordenarlos por precio? 
+
+2) Contratar empleado -> empleado -> tiempo de paseo (acabando va a imprimir el recibo y te dira que gracias por su confianza) 
+3) mis viajes (mvp)
+4) salir
