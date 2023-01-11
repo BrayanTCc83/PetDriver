@@ -4,6 +4,7 @@
 #include "createJason.h"
 #include"quickSort.h"
 #include "menu.h"
+#include "ticket.h"
 #include <assert.h>
 
 /*
