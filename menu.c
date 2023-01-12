@@ -1,24 +1,25 @@
 #include "menu.h"
 #include "ticket.h"
-#include "empresa.c"
+#define MAX_TRABAJADORES 5
 
 void imprimirEmpleados(Empresa empresa){
-    for (int i=0 ; i<MAX_TRABAJADORES;i++){
-        printf("Nombre:%s\n",empresa.empleados[i].nombre);
-        printf("Tarifa:%f\n",empresa.empleados[i].tarifa);
-        printf("Numero de viajes:%s\n",empresa.empleados[i].noViajes);
-        printf("ID (necesario para contratar):%d\n", empresa.empleados[i].id);
+    for (int i=0 ;i<5;i++){
+    printf("Nombre:%s\n",empresa.empleados[i].nombre);
+    printf("Tarifa:%.2f\n",empresa.empleados[i].tarifa);
+    printf("Numero de viajes:%d\n",empresa.empleados[i].noViajes);
+     printf("ID (necesario para contratar):%d\n", empresa.empleados[i].id);
+    printf("\n");
     }
 }
 
-void menu (Hash_table *tabla, Empresa empresa){
+void menu(Hash_table *tabla, Empresa empresa){
 
     int opc;
     int scanId;
     float duracion;
     float costo;
 
-    printf("\nQue quiere hacer KOKO?");
+    printf("\nQue quiere hacer KOKO?\t");
     scanf("%d",&opc);
 
 
@@ -44,7 +45,7 @@ void menu (Hash_table *tabla, Empresa empresa){
         
         printf("\nEl costo del paseo es:%d",costo);
         char name[16]="ticket";
-        ticket(&empresa,name,duracion);
+        ticket(&empresa,name,duracion,contratado);
         
         break;
 
@@ -56,5 +57,4 @@ void menu (Hash_table *tabla, Empresa empresa){
         printf("Opcion Incorrecta");
         break;
     }
-
 }

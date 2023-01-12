@@ -1,7 +1,8 @@
 #ifndef MENU
 #define MENU
-#include <stdio.h>
+
 #include "hashTable.h"
 #include "createJason.h"
-void menu (Hash_table *tabla, Empresa empresa);
+void imprimirEmpleados(Empresa empresa);
+void menu(Hash_table *tabla, Empresa empresa);
 #endif

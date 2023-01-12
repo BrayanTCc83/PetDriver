@@ -9,7 +9,7 @@
 
 /*
 * Para ejecutar el programa
-* gcc -o empresa.exe empresa.c hash_Table.c createJason.c menu.c
+* gcc -o empresa.exe empresa.c hash_Table.c createJason.c menu.c ticket.c
 */
 
 #define HASH_TABLE_SIZE 7
@@ -33,19 +33,28 @@ int main()
 
    for(int i=0; i < MAX_TRABAJADORES && !HT_IsFull( tabla ); ++i ){
       HT_Insert( tabla,petDriver.empleados[i].id,i);
-   }
+   } 
 
-   
+  /*int idx= HT_Search(tabla, 4043);
+   Empleado_Print(&petDriver.empleados[idx]);*/
 
    //quickSort(empleados)
    char archivo[32]="DatosTrabajadores";
    create_json(&petDriver,archivo);
-   HT_Delete( &tabla );
-   assert( tabla == NULL );
-   //-------------------------------------------------------------------- Creacion del Hash Table
+
 
    printf("--------MENU----------\n Bienvenido a petdriver\nSomos una empresa que tiene \ncomo objetivo el bienestar de su mascota, nuestro objetivo es realizar paseos de mascotas con precios\naccesibles para que usted y su mascota puedan tener el mejor dia posible!\n"); 
-   printf("1) Quienes somos?\n 2) Ver empleados -> desea ordenarlos por precio?\n2) Contratar empleado -> empleado -> tiempo de paseo (acabando va a imprimir el recibo y te dira que gracias por su confianza) \n3) mis viajes (mvp)\n4) salir");
+   printf("1) Quienes somos?\n 2) Ver empleados -> desea ordenarlos por precio?\n2) Contratar empleado -> empleado -> tiempo de paseo (acabando va a imprimir el recibo y te dira que gracias por su confianza) \n3) mis viajes (mvp)\n4) salir\n");
+   
    menu(tabla,petDriver);
 
+
+
+
+
+   HT_Delete( &tabla );
+   assert( tabla == NULL );
+   //-------------------------------------------------------------------- Borrar la tabla
+
+   
 }
