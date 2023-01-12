@@ -44,6 +44,14 @@ int main()
    assert( tabla == NULL );
    //-------------------------------------------------------------------- Creacion del Hash Table
 
+      printf("\n8888888b.           888        8888888b.           d8b\n");                           
+      printf(  "888   Y88b          888        888   Y88b          Y8P\n");   
+      printf(  "888    888          888        888    888\n");                                        
+      printf(  "888   d88P  .d88b.  888888     888    888 888d8889 888 888  888  .d88b.  888d8888\n"); 
+      printf(  "8888888P   d8P  Y8b 888        888    888 888P     888 888  888 d8P  Y8b 888P\n"); 
+      printf(  "888        88888888 888        888    888 888      888 Y88  88P 88888888 888 \n");     
+      printf(  "888        Y8b.     Y88b.      888  .d88P 888      888  Y8bd8P  Y8b.     888\n");     
+      printf(  "888          Y8888    Y888     8888888P   888      888   Y88P     Y8888  888\n");  
    printf("--------MENU----------\n Bienvenido a petdriver\nSomos una empresa que tiene \ncomo objetivo el bienestar de su mascota, nuestro objetivo es realizar paseos de mascotas con precios\naccesibles para que usted y su mascota puedan tener el mejor dia posible!\n"); 
    printf("1) Quienes somos?\n 2) Ver empleados -> desea ordenarlos por precio?\n2) Contratar empleado -> empleado -> tiempo de paseo (acabando va a imprimir el recibo y te dira que gracias por su confianza) \n3) mis viajes (mvp)\n4) salir");
    menu(tabla,petDriver);
