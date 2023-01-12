@@ -4,7 +4,14 @@
 #include "hashTable.h"
 #include "createJason.h"
 
-
+/**
+ * 
+ * @brief Crea un json que contiene a todos los empleados de una empresa al igual que sus atributos
+ * 
+ * @param empresa Empresa en la cual se encuentran los empleados a serializar
+ * @param file_name Nombre del archivo a generar
+ * 
+*/
 void create_json(Empresa* empresa, char* file_name){
 
     size_t i;
@@ -34,21 +41,3 @@ void create_json(Empresa* empresa, char* file_name){
  
 }
 
-//Para pruebas
-/*int main(int argc, char const *argv[])
-{
-       Empresa petDriver={
-      .direccion="calle",
-      .nameEmpresa="Pet Driver",
-      .empleados [0]={ 1010,     "Brandom",       1,         9.0 }, 
-      .empleados [1]={ 2021,     "Guillermo",     2,        16.5 },
-      .empleados [2]={ 3032,     "Brayan",        3,        28.5 }, 
-      .empleados [3]={ 4043,     "Emanuel",       4,        14.0 },
-      .empleados [4]={ 5054,     "Juan Pablo",    5,        25.0 }
-
-   };
-    char nombreArchivoJson[80] = "test";
-   create_json(&petDriver,nombreArchivoJson);
-    
-}
-*/

@@ -4,7 +4,14 @@
 
 #include "ticket.h"
 
-
+/**
+ * @brief Generara el ticket de compra que se realiza al contratar a un empleado
+ * 
+ * @param empresa Empresa en la cual trabaja el empleado contratado 
+ * @param file_name Nombre del ticket a generar
+ * @param duracion Duracion del paseo contratado
+ * @param i Indice de la tabla hash del empleado contratado
+*/
 void ticket(Empresa* empresa, char* file_name, float duracion, int i){
 
     strcat(file_name, ".json");

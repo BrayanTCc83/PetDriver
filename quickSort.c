@@ -6,23 +6,53 @@
 
 #define MAX_TRABAJADORES 5
 
+/**
+    @brief Determina si el ID del primer empleado es menor que el segundo
+
+    @param p1 Primer empleado a comparar
+    @param p2 Segundo empleado a comparar
+
+    @return True si es que el primero es menor, false si el segundo es menor
+
+*/
 bool Product_IsLower_By_ID(Empleado *p1, Empleado *p2)
 {
     return (p1->id < p2->id) ? true : false;
 }
 
+
+/**
+    @brief Determina si el ID del primer empleado es mayor que el primero
+
+    @param p1 Primer empleado a comparar
+    @param p2 Segundo empleado a comparar
+
+    @return True si es que el primero es mayor, false si el segundo es mayor
+     
+*/
 bool Product_IsGreater_By_ID(Empleado *p1, Empleado *p2)
 {
     return (p1->id > p2->id) ? true : false;
 }
 
+/**
+ * @brief Funcion de alto nivel de Quicksort
+ * 
+ * @param empresa Empresa la cual quieres ordenar por ID
 
+*/
 void quicksort(Empresa empresa){
-    int first=empresa.empleados[0].id;
-    int last=empresa.empleados[MAX_TRABAJADORES-1].id;
+    int first=0;
+    int last=MAX_TRABAJADORES-1;
     QuickSort(&empresa, first, last);
 }
 
+/**
+ * @brief Funcion bajo nivel de Quicksort
+ * 
+ * @param first Indice del primer valor
+ * @param last Indice del ultimo valor
+*/
 void QuickSort(Empresa *empresa, int first, int last){
     int x0=first;
     int x1=last;
@@ -54,6 +84,13 @@ void QuickSort(Empresa *empresa, int first, int last){
     }
 }
 
+/**
+ *
+ * @brief Intercambia dos empleados
+ * 
+ * @param x1 Primer empleado a intercambiar
+ * @param x2 Segundo empleado a cambiar 
+*/
 void swap(Empleado *x1,Empleado *x2){
     Empleado aux; 
     aux=*x1;

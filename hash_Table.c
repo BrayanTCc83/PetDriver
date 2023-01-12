@@ -14,7 +14,7 @@
 #endif  
 
 #ifndef DBG_HELP
-#define DBG_HELP 1
+#define DBG_HELP 0
 #endif  
 
 #if DBG_HELP > 0
@@ -127,7 +127,7 @@ void HT_Delete( Hash_table** ht )
  * @brief Inserta un elemento en la tabla hash.
  *
  * @param ht Referencia a una tabla hash.
- * @param key El código de barras.
+ * @param key El ID.
  * @param idx El índice (de la tabla de datos) del elemento a ser insertado.
  *
  * @return 
@@ -178,7 +178,7 @@ bool HT_Insert( Hash_table* ht, int32_t key, int32_t idx){
  * código de barras, key.
  *
  * @param ht Tabla hash
- * @param key El código de barras
+ * @param key El ID del empleado
  *
  * @return El índice |idx| en la tabla de productos, o\n
  *         EMPTY_CELL si la celda calculada en la tabla hash está vacía, o\n

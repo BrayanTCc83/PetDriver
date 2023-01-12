@@ -22,7 +22,7 @@ int main()
       .nameEmpresa="Pet Driver",
       .empleados [0]={ 1010,     "Brandom",       1,         9.0 }, 
       .empleados [1]={ 2021,     "Guillermo",     2,        16.5 },
-      .empleados [2]={ 3032,     "Brayan",        3,        28.5 }, 
+      .empleados [2]={ 3032,     "El buen deivid sabroso",        3,        28.5 }, 
       .empleados [3]={ 4043,     "Emanuel",       4,        14.0 },
       .empleados [4]={ 5054,     "Juan Pablo",    5,        25.0 }
    };
@@ -52,17 +52,9 @@ int main()
       printf(  "888        Y8b.     Y88b.      888  .d88P 888      888  Y8bd8P  Y8b.     888\n");     
       printf(  "888          Y8888    Y888     8888888P   888      888   Y88P     Y8888  888\n");  
       
-printf("\n    :::     :::    :::     :::      :::    :::  ::::::::  :::    :::  ::::::::\n");
-printf("  :+: :+:   :+:   :+:    :+: :+:    :+:   :+:  :+:    :+: :+:   :+:  :+:    :+: \n");
-printf("  :+: :+:   :+:   :+:    :+: :+:    :+:   :+:  :+:    :+: :+:   :+:  :+:    :+: \n");
-printf(" +:+   +:+  +:+  +:+    +:+   +:+   +:+  +:+   +:+    +:+ +:+  +:+   +:+    +:+ \n");
-printf("+#++:++#++: +#++:++    +#++:++#++:  +#++:++    +#+    +:+ +#++:++    +#+    +:+ \n");
-printf("+#+     +#+ +#+  +#+   +#+     +#+  +#+  +#+   +#+    +#+ +#+  +#+   +#+    +#+ \n");
-printf("#+#     #+# #+#   #+#  #+#     #+#  #+#   #+#  #+#    #+# #+#   #+#  #+#    #+# \n");
-printf("###     ### ###    ### ###     ###  ###    ###  ########  ###    ###  ########  \n");
-   printf("--------MENU----------\n Bienvenido a petdriver\nSomos una empresa que tiene \ncomo objetivo el bienestar de su mascota, nuestro objetivo es realizar paseos de mascotas con precios\naccesibles para que usted y su mascota puedan tener el mejor dia posible!\n"); 
-   printf("1) Quienes somos?\n 2) Ver empleados -> desea ordenarlos por precio?\n2) Contratar empleado -> empleado -> tiempo de paseo (acabando va a imprimir el recibo y te dira que gracias por su confianza) \n3) mis viajes (mvp)\n4) salir\n");
-   
+
+   printf("--------MENU----------\nBienvenido a petdriver"); 
+
    menu(tabla,petDriver);
 
 
