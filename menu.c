@@ -43,7 +43,7 @@ void menu(Hash_table *tabla, Empresa empresa){
         scanf("%f",&duracion);
         costo=empresa.empleados[contratado].tarifa*duracion;
         
-        printf("\nEl costo del paseo es:%d",costo);
+        printf("\nEl costo del paseo es:%.2f",costo);
         char name[16]="ticket";
         ticket(&empresa,name,duracion,contratado);
         
@@ -51,8 +51,8 @@ void menu(Hash_table *tabla, Empresa empresa){
 
     case 3:
         printf("Somos los mas bellacos de la FI"); 
-
         break;
+        
     default:
         printf("Opcion Incorrecta");
         break;
