@@ -24,8 +24,6 @@ void imprimirEmpleados(Empresa empresa){
 *    @param empresa La empresa de la cual se imprimiran los empleados
 *      
 */
-
-
 void menu(Hash_table *tabla, Empresa empresa){
 int opc=0;
 while(opc!=4){
