@@ -18,7 +18,6 @@
  *@param nameEmpresa Almacenara el nombre de la Empresa.
  *@param direccion Almacenara la dirección de la Empresa.
  *@param Empleado empleados Almacenara a los empleados de la Empresa.
- * 
 */
 
 typedef struct Empleado
