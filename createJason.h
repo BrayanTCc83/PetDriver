@@ -9,8 +9,8 @@
  * 
  * @brief Creamos dos estructuras los cuales contienen los datos bases para el funcionamiento de la empresa
  * 
- * @param empresa Empresa en la cual se encuentran los empleados a serializar
- * @param file_name Nombre del archivo a generar
+ * @param struct Empleado   Contiene las variables donde se almacenaran los datos del empleado.
+ * @param struct Empresa    Contiene los arreglos donde se almacenaran el nombre y dirección de la empresa, también contiene a la estructura empleado.
  * 
 */
 
