@@ -18,12 +18,18 @@ void imprimirEmpleados(Empresa empresa){
 }
 
 /**
-    @brief Menu en el que el usuario decide que quiere hacer
-
-    @param tabla Hash con los ID  de los empleados
-    @param empresa La empresa de la cual se imprimiran los empleados
-      
+*    @brief Menu en el que el usuario decide que quiere hacer
+*
+*    @param tabla Hash con los ID  de los empleados
+*    @param empresa La empresa de la cual se imprimiran los empleados
+*      
 */
+
+
+/**
+*El menu permite interactuar al cliente con la empresa.
+*/
+
 void menu(Hash_table *tabla, Empresa empresa){
 int opc=0;
 while(opc!=4){
