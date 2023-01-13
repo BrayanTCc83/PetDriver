@@ -26,10 +26,6 @@ void imprimirEmpleados(Empresa empresa){
 */
 
 
-/**
-*El menu permite interactuar al cliente con la empresa.
-*/
-
 void menu(Hash_table *tabla, Empresa empresa){
 int opc=0;
 while(opc!=4){
