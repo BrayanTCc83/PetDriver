@@ -12,6 +12,11 @@
 * gcc -o empresa.exe empresa.c hash_Table.c createJason.c menu.c ticket.c
 */
 
+/**
+* 
+* 
+* 
+*/
 #define HASH_TABLE_SIZE 7
 #define MAX_TRABAJADORES 5
 #define MAX_DATA 10
