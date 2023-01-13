@@ -13,7 +13,7 @@
 */
 
 /**
- * @brief Esqueleto de un Json para la impresión de los datos del empleado.
+ * @brief Estructura de un Json para la impresión de los datos del empleado.
  * @param Empresa petDriver variable donde se almacenan los datos que contendra el Json al momento de imprimir.
 */
 #define HASH_TABLE_SIZE 7
@@ -71,3 +71,5 @@ int main()
 
    
 }
+
+
